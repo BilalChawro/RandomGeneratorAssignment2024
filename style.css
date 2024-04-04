@@ -1,0 +1,37 @@
+
+body{
+	background-color: black;
+	font-size: 20px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+h2{
+	color: White;
+	font-weight: normal;
+}
+
+input, button {
+	padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    border: 6px solid #F2613F;
+}
+
+input{
+	color: black;
+}
+
+
+
+button{
+	border: thick;
+	cursor: pointer;
+	background-color: #F2613F; 
+}
+
+p{
+	color:white;
+	font-size: 100px;
+}
+

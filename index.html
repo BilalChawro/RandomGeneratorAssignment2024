@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2> Enter your name to find your spirit animal!</h2>
+
+	<input id="name" type="text">
+	<br>
+	<br>
+  	<button id="inputButton">Find Animal</button>
+
+	<br>
+	<br>
+	
+  	<div id="main">
+    	<p id="answer"></p>
+    </div>
+
+	<script>
+		var name1 = document.getElementById("name");
+		var inputButton1 = document.getElementById("inputButton");
+		var response = document.getElementById("answer");
+
+
+		var animal = [" Badger", " Bat", " Swan", " Cat", " Monkey", " Dog", 
+		  " Stallion", " Doe", " Dolphin", " Dragon", "n Eagle", "n Owl", "n Elephant", " Fox",
+		   " Squirrel", " Hedgehog", " Hummingbird", " Hyena", " Cobra", " Leopard", " Lion", " Lynx",
+		    " Mole", " Hare", "n Orca", "n Otter", " Peacock", " Polar Bear", " Raven",
+		     " Rhinoceros", " Salmon", " Seal", " Shark", " Sparrow", " Tiger", "n Unicorn",
+		      " Vulture", " Rabbit", " Wolf"];
+
+
+		function final(add) {
+		  if (add == "") {
+		  	response.innerText = "Please enter your name!"
+		  }
+		  else {
+			  var random = Math.floor(Math.random() * animal.length);
+			  response.innerText = add + ", your spirit animal is a" + animal[random] + "!";
+			}
+		}
+
+		inputButton1.addEventListener("click", function(){
+		  var add = name1.value;
+		  final(add);
+		  recolor();
+		});
+
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+		    color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+
+
+		function recolor() {
+			response.style.color = getRandomColor();
+
+		}
+
+
+
+			
+
+	</script>
+
+</body>
+</html>
